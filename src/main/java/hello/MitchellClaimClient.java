@@ -22,7 +22,10 @@ public class MitchellClaimClient extends WebServiceGatewaySupport {
 						req,
 						new SoapActionCallback(
 								"http://com/mitchell/examples/claim/mitchellclaimservice"));
-		System.out.println(claimResponse.getCreateClaimResponse());
+		System.out.println();
+		System.out.println("*****************************************************************");
+		System.out.println("			"+claimResponse.getCreateClaimResponse());
+		System.out.println("*****************************************************************");
 	}
 
 	public void readClaim() {
@@ -32,6 +35,9 @@ public class MitchellClaimClient extends WebServiceGatewaySupport {
 						req,
 						new SoapActionCallback(
 								"http://com/mitchell/examples/claim/mitchellclaimservice"));
+		System.out.println("*****************************************************************");
+		System.out.println("			readClaim								");
+		System.out.println("*****************************************************************");
 		ClaimUtil.printClaimResponse(claimResponse.getClaimResponse());
 	}
 
@@ -42,7 +48,10 @@ public class MitchellClaimClient extends WebServiceGatewaySupport {
 						req,
 						new SoapActionCallback(
 								"http://com/mitchell/examples/claim/mitchellclaimservice"));
-		System.out.println(claimResponse.getUpdateClaimResponse());
+		System.out.println();
+		System.out.println("*****************************************************************");
+		System.out.println("			"+claimResponse.getUpdateClaimResponse());
+		System.out.println("*****************************************************************");
 	}
 
 	public void printDateRangeReq() {
@@ -52,6 +61,9 @@ public class MitchellClaimClient extends WebServiceGatewaySupport {
 						req,
 						new SoapActionCallback(
 								"http://com/mitchell/examples/claim/mitchellclaimservice"));
+		System.out.println("*****************************************************************");
+		System.out.println("			DateRangeReq								");
+		System.out.println("*****************************************************************");
 		for (MitchellClaimType mitchellClaimType : claimResponse
 				.getListOfClaims()) {
 			ClaimUtil.printClaimResponse(mitchellClaimType);
